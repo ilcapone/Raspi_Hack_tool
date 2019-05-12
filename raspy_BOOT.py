@@ -9,6 +9,9 @@ from ArpSpoofing import arpSpoofing
 from BruteForceRouter import bruteForceRouterDiccionary
 from Apache_Server import ApacheServerConfig
 
+def MEDIARECORD():
+    print"[$ Shuriken $] Init Media Record config menu ..."
+
 def APACHESERVER():
     print"[$ Shuriken $] Init Apache Server config menu ..."
     ApacheServerConfig.apacheMenu()
@@ -40,7 +43,7 @@ def exit():
     print "[$ Shuriken $] Exit \n"
     sys.exit()
 
-options = {'0': exit, '1': Nmap_use, '2': Wlan_Scan_use, '3': Tcpdump_Scan, '4': ARPSPOOGING, '5': BRUTEFORCE_ROUTERLOGIN, '6': APACHESERVER}
+options = {'0': exit, '1': Nmap_use, '2': Wlan_Scan_use, '3': Tcpdump_Scan, '4': ARPSPOOGING, '5': BRUTEFORCE_ROUTERLOGIN, '6': APACHESERVER, '7': MEDIARECORD}
 
 def MenuLocal():
     while True:
@@ -54,11 +57,12 @@ def MenuLocal():
         print "               4 : ArpSpoofing"
         print "               5 : Brute Force Roueter Login"
         print "               6 : Apache Server"
+        print "               7 : Media Record"
         print "\n"
         try:
             inp = raw_input('[$ Shuriken $] > ')
             n = str(inp)
-            if '0' in n or '1' in n or '2' in n or '3' in n or '4' in n or '5' in n or '6' in n:
+            if '0' in n or '1' in n or '2' in n or '3' in n or '4' in n or '5' in n or '6' in n or '7' in n:
                 options[n]()
             else:
                 print('[$ Shuriken $] Is not recognized as a valid command')

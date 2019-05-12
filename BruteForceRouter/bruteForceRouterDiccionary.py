@@ -1,4 +1,3 @@
-'''
 import urllib2 as ur
 import http.client
 import sys
@@ -59,4 +58,3 @@ def init_BruteForceRouert():
         print(e)
         sys.exit(0)
     attack(ip, users, paswords)
-'''
